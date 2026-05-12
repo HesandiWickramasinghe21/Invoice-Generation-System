@@ -124,4 +124,3 @@ export const lsDelete = (id) => {
 export const lsGetById = (id) => {
   return lsGetAll().find(inv => inv._id === id) || null
 }
-

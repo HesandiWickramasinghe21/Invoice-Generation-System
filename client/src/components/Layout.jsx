@@ -5,7 +5,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: '#f0ebe0' }}>
-      {/* Navbar */}
+      {/* Navbar — matches Figma exactly */}
       <header
         className="no-print sticky top-0 z-50"
         style={{ background: '#1a1a2e', height: '60px' }}

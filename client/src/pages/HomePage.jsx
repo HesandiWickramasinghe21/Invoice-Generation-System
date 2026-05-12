@@ -25,7 +25,7 @@ export default function HomePage() {
     >
       <div className="max-w-screen-xl mx-auto px-8 sm:px-12 lg:px-20 flex items-center min-h-[calc(100vh-56px)]">
 
-        {/* Left column */}
+        {/* ── Left column ── */}
         <div className="flex-1 pr-0 lg:pr-16 py-16 flex flex-col justify-center">
 
           <h1 style={{ fontFamily: "'DM Serif Display', serif", lineHeight: 1.05 }}
@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Right column */}
+        {/* ── Right column — staggered cards ── */}
         <div
           className="hidden lg:flex flex-col gap-4 py-16"
           style={{ width: '320px', flexShrink: 0 }}
@@ -84,7 +84,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Mobile feature cards*/}
+        {/* Mobile feature cards — horizontal scroll */}
         <div className="lg:hidden absolute bottom-0 left-0 right-0 flex gap-4 overflow-x-auto px-8 pb-6 pt-2 no-scrollbar">
           {features.map(f => (
             <div

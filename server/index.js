@@ -1,4 +1,4 @@
-const express = require ('express');
+const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
@@ -10,8 +10,8 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
-    credentials: true
+  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
@@ -39,16 +39,16 @@ app.use((err, req, res, next) => {
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/invoice_db')
   .then(() => {
-    console.log('Connected to MongoDB');
+    console.log('✅ Connected to MongoDB');
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   })
   .catch((err) => {
-    console.error('MongoDB connection error:', err.message);
-    console.log('Starting server without database (localStorage mode only)...');
+    console.error('❌ MongoDB connection error:', err.message);
+    console.log('ℹ️  Starting server without database (localStorage mode only)...');
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT} (no DB)`);
+      console.log(`🚀 Server running on http://localhost:${PORT} (no DB)`);
     });
   });
 

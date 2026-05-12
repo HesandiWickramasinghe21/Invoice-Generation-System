@@ -5,14 +5,14 @@ import SavedInvoicesPage from './pages/SavedInvoicesPage.jsx'
 import Layout from './components/Layout.jsx'
 
 export default function App() {
-    return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<HomePage />} />
-                <Route path="invoice/new" element={<InvoiceEditorPage />} />
-                <Route path="invoice/edit/:id" element={<InvoiceEditorPage />} />
-                <Route path="invoices" element={<SavedInvoicesPage />} />
-            </Route>
-        </Routes>
-    )
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="invoice/new" element={<InvoiceEditorPage />} />
+        <Route path="invoice/edit/:id" element={<InvoiceEditorPage />} />
+        <Route path="invoices" element={<SavedInvoicesPage />} />
+      </Route>
+    </Routes>
+  )
 }
